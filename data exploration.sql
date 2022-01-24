@@ -1,18 +1,5 @@
 -- Link to Dataset: https://ourworldindata.org/covid-deaths
 
---
-SELECT *
-FROM PortfolioProject..CovidDeaths
-WHERE continent is not null 
-ORDER BY 3,4
-
---
-SELECT location, date, total_cases, new_cases, total_deaths, population
-FROM PortfolioProject..CovidDeaths
-WHERE continent is not null 
-ORDER BY 1,2
-
-
 -- Total Cases vs Total Deaths
 -- Shows likelihood of dying if you contract covid in your country
 
@@ -44,7 +31,7 @@ ORDER BY PercentPopulationInfected desc
 SELECT SUM(new_cases) AS total_cases, SUM(cast(new_deaths AS int)) AS total_deaths, SUM(cast(new_deaths AS int))/SUM(New_Cases)*100 AS DeathPercentage
 FROM PortfolioProject..CovidDeaths
 WHERE continent is not null 
-GROUP BY date
+--GROUP BY date
 ORDER BY 1,2
 
 
@@ -80,6 +67,7 @@ ORDER BY 2,3
 
 SELECT *, (RollingPeopleVaccinated/Population)*100
 FROM PopvsVac
+
 
 
 
