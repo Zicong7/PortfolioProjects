@@ -1,2 +1,2 @@
 # PortfolioProjects
-Link to Dataset: https://ourworldindata.org/covid-deaths
+Link to COVID Dataset: https://ourworldindata.org/covid-deaths
