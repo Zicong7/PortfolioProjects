@@ -14,7 +14,7 @@ order by 1,2
 Select location, SUM(cast(new_deaths as int)) as TotalDeathCount
 From PortfolioProject..CovidDeaths
 Where continent is null 
-and location not in ('World', 'European Union', 'International')
+and location in ('Africa', 'Asia', 'Europe', 'North America', 'Oceania', 'South America')
 Group by location
 order by TotalDeathCount desc
 
